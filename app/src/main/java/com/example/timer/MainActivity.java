@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
     private void onFinishedTime() {
         Button button = findViewById(R.id.start_timer_button);
         button.setText(START_TIMER);
+        button.setTag(STOP_STATUS);
         MediaPlayer mp = MediaPlayer.create(this, R.raw.ending_sound);
         mp.setOnCompletionListener(MediaPlayer::release);
         mp.start();
